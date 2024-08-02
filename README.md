@@ -14,11 +14,13 @@ After that, perform the following:
 The scripts will expect the following directory structure in your vault. 
 It is essential for your vault to be structured this way in order for the scripts to work. 
 
+```
 .
 ├── full\_notes
 ├── tags
 ├── \_\_scripts\_\_
 └── \_\_templates\_\_
+```
 
 **full_notes** 
 - Where your notes will be stored. Each level supports multiple indices.
@@ -29,11 +31,11 @@ It is essential for your vault to be structured this way in order for the script
 - Where your tag pages will be saved. Each tag page is a collection of notes that contain a tag. 
 - These are auto generated. Do not write in them because the content you produce will be wiped the next time it is updated. 
 
-**__scripts__** 
+**\_\_scripts\_\_** 
 - Where your user scripts will be stored. 
 - Functions here are accessible via `tp.user.${export_func}`. 
 
-**__templates__**
+**\_\_templates\_\_**
 - This is where the templater templates are stored.
 
 ## Using the templates
