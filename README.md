@@ -18,8 +18,8 @@ It is essential for your vault to be structured this way in order for the script
 .
 ├── full\_notes
 ├── tags
-├── \_\_scripts\_\_
-└── \_\_templates\_\_
+├── __scripts__
+└── __templates__
 ```
 
 **full_notes** 
