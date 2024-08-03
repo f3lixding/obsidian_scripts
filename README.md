@@ -16,7 +16,7 @@ It is essential for your vault to be structured this way in order for the script
 
 ```
 .
-├── full\_notes
+├── full_notes
 ├── tags
 ├── __scripts__
 └── __templates__
@@ -26,6 +26,7 @@ It is essential for your vault to be structured this way in order for the script
 - Where your notes will be stored. Each level supports multiple indices.
 - Each level should include a `index.md`. This is the index page for that level.
 - Children folders should mirror that structure. As long as a child folder has a `index.md`, it will be linked by its parent level index.
+- Also note that if you are integrating this to your existing fault, in order for a note to be recorgnized as such, it needs to have the metadata of `is_primary`
 
 **tags** 
 - Where your tag pages will be saved. Each tag page is a collection of notes that contain a tag. 

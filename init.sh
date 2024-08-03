@@ -14,7 +14,7 @@ template_dir="__templates__"
 has_script_dir=false
 has_template_dir=false
 
-dirs=$(ls -l $1 | grep ^d | awk '{print $9}')
+dirs=$(ls -l "$1" | grep ^d | awk '{print $9}')
 
 for dir in ${dirs[@]}; do
   if [ "$dir" == "$script_dir" ]; then 
@@ -26,24 +26,24 @@ done
 
 if [ "$has_script_dir" == false ]; then 
   echo "Making user script directory"
-  mkdir ${1}/__scripts__
+  mkdir "${1}"/__scripts__
 fi
 
 source="${root_dir}/__scripts__"
-if mv $source/* "${1}/__scripts__" 2>/dev/null; then
+if cp -r "$source"/* "${1}/__scripts__" 2>/dev/null; then
   echo "Scripts have been moved successfully"
 else 
-  echo "Error moving scripts" >&2
+  echo "Error copying scripts" >&2
 fi
 
 if [ "$has_template_dir" == false ]; then
   echo "Making templates directory"
-  mkdir ${1}/__templates__
+  mkdir "${1}"/__templates__
 fi
 
 source="${root_dir}/__templates__"
-if mv "$source"/* "${1}/__templates__" 2>/dev/null; then
+if cp -r "$source"/* "${1}/__templates__" 2>/dev/null; then
   echo "Templates have been moved successfully"
 else
-  echo "Error moving templates" >&2
+  echo "Error copying templates" >&2
 fi 
